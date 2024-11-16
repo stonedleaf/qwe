@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: devops-bootcamp-vm
 
     steps:
     - uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
         cat myfile.txt
 
   setup:
-    runs-on: ubuntu-latest
+    runs-on: devops-bootcamp-vm
     needs: [build]
 
     steps:
