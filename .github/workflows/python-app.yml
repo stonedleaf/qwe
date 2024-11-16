@@ -16,7 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
     
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
@@ -27,3 +26,17 @@ jobs:
         python generate.py
 
         cat myfile.txt
+
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup
+        run: |
+          echo "Doing some setup!"
+
+          python other.py
+          cat myfile.txt
+
+          echo "Setup Complete"
